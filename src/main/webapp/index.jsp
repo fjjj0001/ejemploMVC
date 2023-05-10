@@ -14,17 +14,18 @@
 <form action="${pageContext.request.contextPath}/api/clientes/alta" method="POST">
   <div class="form-group">
     <div>
-      <label>Nombre</label>
-      <input name="nombre" class="form-control" type="text" placeholder="Nombre y apellidos">
+      <label>Nombre y apellidos</label>
+      <input name="nombre" class="form-control" type="text" value="${nombre}" placeholder="Nombre y apellidos">
     </div>
+    <div style="color: red;">${errores['nombre']}</div>
     <div>
-      <div>
       <label>DNI</label>
-      <input name="dni" class="form-control" type="text" placeholder="DNI"></div>
+      <input name="dni" class="form-control" type="text" value="${dni}" placeholder="DNI">
+    </div>
+    <div style="color: red;">${errores['dni']}</div>
   <div class="form-row" style="text-align: center">
     <input class="btn btn-primary col-md-2" name="enviar" type="Submit" value="Guardar">
     <input class="btn btn-primary col-md-2" name="enviar" type="Reset" value="Limpiar">
-  </div>
   </div>
 </form>
 

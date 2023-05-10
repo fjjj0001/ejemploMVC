@@ -11,8 +11,8 @@
 <div class="card">
     <h1 class="titulo">Datos del cliente</h1>
     <div class="container">
-        <div>Nombre: ${nombre}</div>
-        <div>DNI: ${dni}</div>
+        <div><strong>Nombre: </strong>${nombre}</div>
+        <div><strong>DNI: </strong>${dni}</div>
         <form method="POST" action="${pageContext.request.contextPath}/api/clientes/${dni}">
             <input type="submit" class="btn btn-danger" value="Borrar cliente">
         </form>
